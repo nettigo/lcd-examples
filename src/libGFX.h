@@ -12,7 +12,7 @@ Arduino_GFX *gfx = new Arduino_ST7796(bus, D4 /* RST */);
 void setup(){
     Serial.begin(115200);
     Serial.println("\nSTART");
-    gfx->begin(80000000);
+    gfx->begin(40000000);
     gfx->setRotation(1);
     gfx->fillScreen(BLACK);
     gfx->println("Hello World!");

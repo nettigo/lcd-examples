@@ -2,7 +2,7 @@
 // Created by viciu on 2/9/24.
 //
 #include <SPI.h>
-#include <TFT_eSPI.h> // Hardware-specific library
+#include <TFT_eSPI.h>
 //#include <User_Setups/Setup28_RPi_ST7796_ESP8266.h>
 
 TFT_eSPI tft = TFT_eSPI();       // Invoke custom library
@@ -233,7 +233,7 @@ void setup(){
 //    testSetup();
     Serial.println("\nSTART");
     tft.init();
-    tft.setRotation(1);
+    tft.setRotation(3);
     tft.fillScreen(TFT_BLACK);
     byte y=10;
 
@@ -243,6 +243,7 @@ void setup(){
 //    }
     delay(5000);
     analogMeter(); // Draw analogue meter
+    plotLinear("T",240,0);
 
 };
 

@@ -31,11 +31,6 @@ void testSetup() {
         Serial.println("MHz");
     }
 #endif
-#ifdef ARDUINO_ARCH_ESP8266
-    Serial.print("Voltage      = ");
-    Serial.print(ESP.getVcc() / 918.0);
-    Serial.println("V"); // 918 empirically determined
-#endif
     Serial.print("Transactions = ");
     Serial.println((user.trans == 1) ? "Yes" : "No");
     Serial.print("Interface    = ");
