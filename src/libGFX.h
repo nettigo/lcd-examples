@@ -6,8 +6,8 @@
 #define ST7796_4_CALE_LIBGFX_H
 #include <Arduino_GFX_Library.h>
 //#include "setupDebug.h"
-Arduino_DataBus *bus = new Arduino_HWSPI(D3 /* DC */, D2 /* CS */);
-Arduino_GFX *gfx = new Arduino_ST7796(bus, D4 /* RST */);
+Arduino_DataBus *bus = new Arduino_HWSPI(D1 /* DC */, D8 /* CS */);
+Arduino_GFX *gfx = new Arduino_ILI9486(bus, -1 /* RST */);
 #include "ntg_napis.h"
 void setup(){
     Serial.begin(115200);

@@ -6,7 +6,7 @@
 //#include <User_Setups/Setup28_RPi_ST7796_ESP8266.h>
 
 TFT_eSPI tft = TFT_eSPI();       // Invoke custom library
-//#include "setupDebug.h"
+#include "setupDebug.h"
 
 #include "ntg_napis.h"
 #define TFT_GREY 0x5AEB
@@ -230,7 +230,7 @@ void analogMeter()
 
 void setup(){
     Serial.begin(115200);
-//    testSetup();
+    testSetup();
     Serial.println("\nSTART");
     tft.init();
     tft.setRotation(3);
